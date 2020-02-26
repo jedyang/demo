@@ -47,11 +47,11 @@
 			<version>${itext.version}</version>
 			<type>pom</type>
 		</dependency>
-		<dependency>
-			<groupId>com.itextpdf</groupId>
-			<artifactId>font-asian</artifactId>
-			<version>${itext.version}</version>
-		</dependency>
+		<!--<dependency>-->
+			<!--<groupId>com.itextpdf</groupId>-->
+			<!--<artifactId>font-asian</artifactId>-->
+			<!--<version>${itext.version}</version>-->
+		<!--</dependency>-->
 
 	</dependencies>
 
