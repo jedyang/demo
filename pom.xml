@@ -24,6 +24,15 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+		<!--演示websocket-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-websocket</artifactId>
+		</dependency>
 
 		<dependency>
 			<groupId>org.projectlombok</groupId>
@@ -47,11 +56,7 @@
 			<version>${itext.version}</version>
 			<type>pom</type>
 		</dependency>
-		<!--<dependency>-->
-			<!--<groupId>com.itextpdf</groupId>-->
-			<!--<artifactId>font-asian</artifactId>-->
-			<!--<version>${itext.version}</version>-->
-		<!--</dependency>-->
+
 
 	</dependencies>
 
