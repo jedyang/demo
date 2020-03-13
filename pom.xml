@@ -34,6 +34,24 @@
 			<artifactId>spring-boot-starter-websocket</artifactId>
 		</dependency>
 
+		<!-- 演示html转成图片-->
+		<dependency>
+			<groupId>com.github.xuwei-k</groupId>
+			<artifactId>html2image</artifactId>
+			<version>0.1.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.5.5</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpmime</artifactId>
+			<version>4.5</version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
@@ -56,8 +74,6 @@
 			<version>${itext.version}</version>
 			<type>pom</type>
 		</dependency>
-
-
 	</dependencies>
 
 	<build>
