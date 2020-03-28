@@ -3,7 +3,7 @@ package com.example.demo.file;
 import java.io.*;
 
 /**
- * @description:
+ * @description: 文件拆分与合并源码
  * @author: 技术笔记与开源分享
  * @createDate: 2020/3/20
  * @version: 1.0
@@ -48,7 +48,6 @@ public class SplitAndMerge {
      */
     public static void merge() throws IOException {
 
-//        File[] files = new File[3];
         int length = 3;
         String name = "src/test/resources/file/src.pdf.";
         File file = new File("src/test/resources/file/new.pdf");
@@ -60,7 +59,6 @@ public class SplitAndMerge {
         int len = -1;
         for (int i = 0; i < length; i++) {
             File src = new File(name + (i + 1));
-//            files[i] = new File(name + (i + 1));
             RandomAccessFile out = new RandomAccessFile(src, "rw");
             while ((len = out.read(bytes)) != -1) {
                 in.write(bytes, 0, len);
