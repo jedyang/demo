@@ -20,6 +20,7 @@
 		<module>redis</module>
 		<module>mbp</module>
 		<module>zookeeper</module>
+		<module>springsecurity</module>
 	</modules>
 
 </project>
