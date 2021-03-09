@@ -15,6 +15,11 @@
         <itext.version>7.1.9</itext.version>
     </properties>
     <dependencies>
+        <dependency>
+            <groupId>com.yunsheng</groupId>
+            <artifactId>oss</artifactId>
+            <version>1.0.0</version>
+        </dependency>
         <!-- https://mvnrepository.com/artifact/org.bouncycastle/bcprov-jdk15on -->
         <dependency>
             <groupId>org.bouncycastle</groupId>
