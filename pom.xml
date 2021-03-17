@@ -23,6 +23,7 @@
 		<module>springsecurity</module>
 		<module>oss</module>
 		<module>netty</module>
+		<module>base</module>
 	</modules>
 
 </project>
