@@ -8,10 +8,19 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.handler.codec.FixedLengthFrameDecoder;
+import io.netty.handler.codec.string.StringDecoder;
 import io.netty.handler.logging.LogLevel;
 import io.netty.handler.logging.LoggingHandler;
 
 public class EchoServer {
+
+    public static void main(String[] args) {
+        try {
+            new EchoServer().startEchoServer(9000);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     public void startEchoServer(int port) throws Exception {
 
@@ -27,9 +36,9 @@ public class EchoServer {
                     .childHandler(new ChannelInitializer<SocketChannel>() {
                         @Override
                         public void initChannel(SocketChannel ch) {
-                            ch.pipeline().addLast(new FixedLengthFrameDecoder(10));
-//                            ch.pipeline().addLast(new ResponseSampleEncoder());
-//                            ch.pipeline().addLast(new RequestSampleHandler());
+                            ch.pipeline()
+                                    .addLast(new StringDecoder())
+                                    .addLast(new EchoServerHandler());
                         }
                     });
 
