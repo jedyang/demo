@@ -106,3 +106,6 @@ lock.lock();
  ```
  
 和juc中用法一样
+
+### redisTemplate
+
