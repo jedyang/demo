@@ -45,7 +45,7 @@ public class CodeGenerator {
 
         // 全局配置
         GlobalConfig gc = new GlobalConfig();
-        String projectPath = "F:\\github\\demo\\mbp";
+        String projectPath = "D:\\github\\demo\\mbp";
 //        String projectPath = System.getProperty("user.dir");
 //        gc.setOutputDir(projectPath + "/src/main/java");
         // 设置生产的代码存放路径
@@ -58,10 +58,10 @@ public class CodeGenerator {
 
         // 数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setUrl("jdbc:mysql://x.x.x.x:3306/ts_test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&verifyServerCertificate=false&useSSL=false&allowMultiQueries=true");
-        dsc.setDriverName("com.mysql.jdbc.Driver");
-        dsc.setUsername("username");
-        dsc.setPassword("passwd");
+        dsc.setUrl("jdbc:mysql://10.250.151.211:30437/test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&verifyServerCertificate=false&useSSL=false&allowMultiQueries=true");
+        dsc.setDriverName("com.mysql.cj.jdbc.Driver");
+        dsc.setUsername("db");
+        dsc.setPassword("123456");
         mpg.setDataSource(dsc);
 
         // 包配置

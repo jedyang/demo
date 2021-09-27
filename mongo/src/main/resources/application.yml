@@ -1,0 +1,15 @@
+# 应用名称
+spring:
+  application:
+    name: mongo
+  data:
+    mongodb:
+      uri: mongodb://tododb:oUvI0rQN@10.250.30.68:11000,10.250.30.69:11000,10.250.30.70:11000/tododb?replicaSet=dbzx&authSource=tododb&readPreference=secondaryPreferred&safe=true&authMechanism=SCRAM-SHA-1&maxPoolSize=500&minPoolSize=10
+#      authentication-database: tododb
+#      username: tododb
+#      password: oUvI0rQN
+#      host: 10.250.30.68:11000,10.250.30.69:11000,10.250.30.70:11000
+#      replica-set-name: dbzx
+
+server:
+  port: 8080

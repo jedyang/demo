@@ -17,6 +17,7 @@
 
 	<modules>
 		<module>mix</module>
+		<module>dubbo</module>
 		<module>redis</module>
 		<module>mbp</module>
 		<module>zookeeper</module>
@@ -24,6 +25,10 @@
 		<module>oss</module>
 		<module>netty</module>
 		<module>base</module>
+		<module>mongo</module>
+<!--		<module>mysql</module>-->
+		<module>page</module>
+		<module>oom</module>
 	</modules>
 
 </project>
