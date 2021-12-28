@@ -9,11 +9,14 @@ import io.netty.util.CharsetUtil;
 
 public class HttpServerHandler extends SimpleChannelInboundHandler<FullHttpRequest> {
     @Override
-    protected void channelRead0(ChannelHandlerContext ctx, FullHttpRequest msg) throws Exception {
+    protected void channelRead0(ChannelHandlerContext ctx, FullHttpRequest msg) {
         String content = String.format("Receive http request, uri: %s, method: %s, content: %s%n", msg.uri(), msg.method(), msg.content().toString(CharsetUtil.UTF_8));
         System.out.println(content);
+        String data = "i have reveived you msg:" + msg.content().toString(CharsetUtil.UTF_8);
         FullHttpResponse response = new DefaultFullHttpResponse(
-                HttpVersion.HTTP_1_1, HttpResponseStatus.OK, Unpooled.wrappedBuffer(content.getBytes()));
+                HttpVersion.HTTP_1_1,
+                HttpResponseStatus.OK,
+                Unpooled.wrappedBuffer(data.getBytes()));
         ctx.writeAndFlush(response).addListener(ChannelFutureListener.CLOSE);
 
     }

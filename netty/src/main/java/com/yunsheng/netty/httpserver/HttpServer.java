@@ -23,7 +23,7 @@ public class HttpServer {
         }
     }
 
-    public void start(int port) throws Exception {
+    private void start(int port) throws Exception {
         EventLoopGroup bossGroup = new NioEventLoopGroup();
         EventLoopGroup workerGroup = new NioEventLoopGroup();
         ServerBootstrap serverBootstrap = new ServerBootstrap();
@@ -49,7 +49,8 @@ public class HttpServer {
                         }
                     })
                     //        ServerBootstrap 设置 Channel 属性有option和childOption两个方法，option 主要负责设置 Boss 线程组，而 childOption 对应的是 Worker 线程组。
-                    .childOption(ChannelOption.SO_KEEPALIVE, true);
+                    .option(ChannelOption.SO_BACKLOG, 512) // 已完成三次握手的请求队列最大长度，同一时刻服务端可能会处理多个连接，在高并发海量连接的场景下，该参数应适当调大
+                    .childOption(ChannelOption.SO_KEEPALIVE, true); // 启用了 TCP SO_KEEPALIVE 属性，TCP 会主动探测连接状态，即连接保活
             // bind() 方法会真正触发启动
 //        ChannelFuture bind = serverBootstrap.bind();
             // sync() 方法则会阻塞，直至整个启动过程完成

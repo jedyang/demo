@@ -7,7 +7,6 @@
         <artifactId>demo</artifactId>
         <version>1.0.0</version>
     </parent>
-    <groupId>com.yunsheng</groupId>
     <artifactId>base</artifactId>
     <name>base</name>
     <description>Demo project for java</description>
@@ -28,6 +27,11 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
             <scope>test</scope>
         </dependency>
     </dependencies>
