@@ -25,6 +25,8 @@ public class OomApplication {
         System.out.println("Total_Memory(-Xms ) =  " + totalMemory + " 字节  " + (totalMemory / (double) 1024 / 1024) + "MB");
         System.out.println("Max_Memory(-Xmx ) =  " + maxMemory + " 字节  " + (maxMemory / (double) 1024 / 1024) + "MB");
 
+        // 看一下获取的环境的cpu核数
+        System.out.println("cpu核数:" + rt.availableProcessors());
         List l = new ArrayList<>();
         while (true) {
             byte b[] = new byte[1048576];
