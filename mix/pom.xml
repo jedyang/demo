@@ -12,7 +12,7 @@
     <description>杂七杂八的代码</description>
     <properties>
         <java.version>1.8</java.version>
-        <itext.version>7.1.9</itext.version>
+        <itext.version>7.2.0</itext.version>
     </properties>
     <dependencies>
         <dependency>
