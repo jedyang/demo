@@ -17,7 +17,7 @@ public class TestDemo {
     public static void main(String[] args) {
 //        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 //        System.out.println(date.getTime());
-        long appId = 100104;
+        long appId = 100005;
         /**
          * 使用自定义配置：
          * 1. setTimeout：redis操作的超时设置；
@@ -29,7 +29,7 @@ public class TestDemo {
                 .setConnectionTimeout(1000)
                 .setSoTimeout(1000)
                 .setMaxRedirections(5)
-                .build("wW1tUY8n");
+                .build("syfdgh");
         while (true) {
             try {
                 long date = new Date().getTime();
@@ -41,7 +41,7 @@ public class TestDemo {
                 System.out.println(redisCluster.get(key));
 
                 try {
-                    Thread.sleep(1000);
+                    Thread.sleep(5 * 1000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

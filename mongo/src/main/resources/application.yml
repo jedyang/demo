@@ -4,7 +4,8 @@ spring:
     name: mongo
   data:
     mongodb:
-      uri: mongodb://tododb:oUvI0rQN@10.250.30.68:11000,10.250.30.69:11000,10.250.30.70:11000/tododb?replicaSet=dbzx&authSource=tododb&readPreference=secondaryPreferred&safe=true&authMechanism=SCRAM-SHA-1&maxPoolSize=500&minPoolSize=10
+      uri: mongodb://org_test:org_test@10.250.5.74:11100,10.250.5.75:11100,10.250.5.117:11100/org_sys_dev?replicaSet=xcw&authSource=org_sys_dev&readPreference=secondaryPreferred&safe=true&authMechanism=SCRAM-SHA-1&maxPoolSize=500&minPoolSize=10
+#      uri: mongodb://tododb:oUvI0rQN@10.250.30.68:11000,10.250.30.69:11000,10.250.30.70:11000/tododb?replicaSet=dbzx&authSource=tododb&readPreference=secondaryPreferred&safe=true&authMechanism=SCRAM-SHA-1&maxPoolSize=500&minPoolSize=10
 #      authentication-database: tododb
 #      username: tododb
 #      password: oUvI0rQN
