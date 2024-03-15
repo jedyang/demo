@@ -1,0 +1,10 @@
+apiVersion: tutorial.demo.com/v1
+kind: Demo
+metadata:
+  namespace: demo
+  name: demo-sample
+spec:
+  # TODO(user): Add fields here
+  image: nginx:1.22
+  svcName: demo-ng
+  replicas: 3
