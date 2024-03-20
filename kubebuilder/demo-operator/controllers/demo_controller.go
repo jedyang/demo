@@ -54,7 +54,9 @@ const (
 //+kubebuilder:rbac:groups=tutorial.demo.com,resources=demoes/status,verbs=get;update;patch
 //+kubebuilder:rbac:groups=tutorial.demo.com,resources=demoes/finalizers,verbs=update
 //+kubebuilder:rbac:groups=core,resources=services,verbs=get;list;watch;create;update;patch;delete
+//+kubebuilder:rbac:groups=core,resources=services/status,verbs=get
 //+kubebuilder:rbac:groups=apps,resources=deployments,verbs=get;list;watch;create;update;patch;delete
+//+kubebuilder:rbac:groups=apps,resources=deployments/status,verbs=get
 
 // Reconcile is part of the main kubernetes reconciliation loop which aims to
 // move the current state of the cluster closer to the desired state.
@@ -337,7 +339,10 @@ func (r *DemoReconciler) SetupWithManager(mgr ctrl.Manager) error {
 			return err
 		}*/
 
+	// Owns告诉manager，我们的crd有依赖的deployment和service。如果他们的状态或spec发生改变，要重新触发reconcile
 	return ctrl.NewControllerManagedBy(mgr).
 		For(&tutorialv1.Demo{}).
+		Owns(&appsv1.Deployment{}).
+		Owns(&corev1.Service{}).
 		Complete(r)
 }
