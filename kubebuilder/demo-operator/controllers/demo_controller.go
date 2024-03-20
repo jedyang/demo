@@ -318,26 +318,8 @@ func (r *DemoReconciler) updateStatus(ctx context.Context, instance *tutorialv1.
 	return nil
 }
 
-// var (
-//
-//	indexName = ".metadata.name"
-//
-// )
-
 // SetupWithManager sets up the controller with the Manager.
 func (r *DemoReconciler) SetupWithManager(mgr ctrl.Manager) error {
-	// 建立pod name的索引
-	/*	if err := mgr.GetFieldIndexer().IndexField(
-			context.Background(),
-			&corev1.Pod{},
-			".metadata.name",
-			func(rawObj client.Object) []string {
-				pod := rawObj.(*corev1.Pod)
-				return []string{pod.Name}
-			},
-		); err != nil {
-			return err
-		}*/
 
 	// Owns告诉manager，我们的crd有依赖的deployment和service。如果他们的状态或spec发生改变，要重新触发reconcile
 	return ctrl.NewControllerManagedBy(mgr).
