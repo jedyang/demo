@@ -1,0 +1,21 @@
+domain: demo.com
+layout:
+- go.kubebuilder.io/v3
+projectName: demo-operator
+repo: demo.com/tutorial
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: demo.com
+  group: tutorial
+  kind: Demo
+  path: demo.com/tutorial/api/v1
+  version: v1
+  webhooks:
+    conversion: true
+    defaulting: true
+    validation: true
+    webhookVersion: v1
+version: "3"
